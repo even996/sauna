@@ -48,7 +48,7 @@ const FEATURES = [
   { icon: "🔥", label: "Vedfyrt varme", sub: "Ekte ovn, ekte damp" },
   { icon: "❄️", label: "Kaldt dykk", sub: "Isbad eller sjødykk" },
   { icon: "🌲", label: "Privat natur", sub: "Ingen folkemengder, bare stillhet" },
-  { icon: "🛁", label: "Alt inkludert", sub: "Håndklær, kåper og te" },
+  { icon: "🛁", label: "Alt inkludert", sub: "Håndklær, kåper og kaldt vann" },
 ];
 
 export default function HomePage() {
@@ -801,7 +801,7 @@ export default function HomePage() {
           <li><a href="#">Personvern</a></li>
           <li><a href="#">Gavekort</a></li>
         </ul>
-        <span className="footer-copy">© 2026 Sauna på farten. Alle rettigheter forbeholdt.</span>
+        <span className="footer-copy">© 2026 Sauna på farten. Alle rettigheter forbeholdt. Kontakt oss</span>
       </footer>
 
       {/* BOOKING DIALOG */}
