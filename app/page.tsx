@@ -1,15 +1,9 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import Navbar from "./components/Navbar/Navbar";
 import Image from "next/image";
 
-const NAV_LINKS = [
-  { label: "Om oss", href: "#om-oss" },
-  { label: "Badstuer", href: "#badstuer" },
-  { label: "Priser", href: "#priser" },
-  { label: "Sted", href: "#sted" },
-  { label: "Book", href: "#book" },
-];
 
 const SAUNAS = [
   {
@@ -109,63 +103,6 @@ export default function HomePage() {
           font-weight: 300;
           overflow-x: hidden;
         }
-
-        /* NAV */
-        nav {
-          position: fixed;
-          top: 0; left: 0; right: 0;
-          z-index: 100;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          padding: 1.5rem 3rem;
-          transition: background 0.4s, padding 0.4s;
-        }
-        nav.scrolled {
-          background: rgba(20,18,16,0.92);
-          backdrop-filter: blur(12px);
-          padding: 1rem 3rem;
-          border-bottom: 1px solid rgba(192,118,58,0.12);
-        }
-        .nav-logo {
-          font-family: 'Cormorant Garamond', serif;
-          font-size: 1.35rem;
-          font-weight: 300;
-          letter-spacing: 0.04em;
-          color: var(--amber);
-          text-decoration: none;
-          line-height: 1.15;
-        }
-        .nav-logo span {
-          font-style: italic;
-          color: var(--cream);
-          display: block;
-          font-size: 0.75em;
-          letter-spacing: 0.18em;
-        }
-        .nav-links { display: flex; gap: 2.5rem; list-style: none; }
-        .nav-links a {
-          font-size: 0.78rem;
-          letter-spacing: 0.2em;
-          text-transform: uppercase;
-          color: var(--birch);
-          text-decoration: none;
-          transition: color 0.2s;
-        }
-        .nav-links a:hover { color: var(--amber); }
-        .nav-book-btn {
-          font-size: 0.75rem;
-          letter-spacing: 0.18em;
-          text-transform: uppercase;
-          padding: 0.6rem 1.6rem;
-          border: 1px solid var(--ember);
-          color: var(--amber);
-          background: transparent;
-          cursor: pointer;
-          font-family: 'Jost', sans-serif;
-          transition: background 0.25s, color 0.25s;
-        }
-        .nav-book-btn:hover { background: var(--ember); color: var(--white); }
 
         /* HERO */
         .hero {
@@ -654,20 +591,8 @@ export default function HomePage() {
         }
       `}</style>
 
-      {/* NAV */}
-      <nav className={scrolled ? "scrolled" : ""}>
-        <a href="#" className="nav-logo">
-          Sauna på farten
-          <span>Bergen, Norge</span>
-        </a>
-        <ul className="nav-links">
-          {NAV_LINKS.map((l) => (
-            <li key={l.label}><a href={l.href}>{l.label}</a></li>
-          ))}
-        </ul>
-        <button className="nav-book-btn" onClick={() => openBooking()}>Book nå</button>
-      </nav>
-
+      <Navbar onBookClick={() => openBooking()} />
+      
       {/* HERO */}
       <section className="hero" ref={heroRef} id="om-oss">
         <div className="hero-bg" />

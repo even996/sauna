@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap');
+
+:root {
+  --charcoal: #141210;
+  --ash: #1e1b18;
+  --ember: #c0763a;
+  --amber: #e8a95c;
+  --cream: #f2ece3;
+  --mist: #a89e93;
+  --birch: #d4c4b0;
+  --white: #faf7f2;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 3rem;
+  transition: background 0.4s, padding 0.4s;
+}
+
+nav.scrolled {
+  background: rgba(20, 18, 16, 0.92);
+  backdrop-filter: blur(12px);
+  padding: 1rem 3rem;
+  border-bottom: 1px solid rgba(192, 118, 58, 0.12);
+}
+
+.nav-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  color: var(--amber);
+  text-decoration: none;
+  line-height: 1.15;
+}
+
+.nav-logo span {
+  font-style: italic;
+  color: var(--cream);
+  display: block;
+  font-size: 0.75em;
+  letter-spacing: 0.18em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--birch);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--amber);
+}
+
+.nav-book-btn {
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 0.6rem 1.6rem;
+  border: 1px solid var(--ember);
+  color: var(--amber);
+  background: transparent;
+  cursor: pointer;
+  font-family: 'Jost', sans-serif;
+  transition: background 0.25s, color 0.25s;
+}
+
+.nav-book-btn:hover {
+  background: var(--ember);
+  color: var(--white);
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 1.25rem 1.5rem;
+  }
+
+  nav.scrolled {
+    padding: 0.875rem 1.5rem;
+  }
+
+  .nav-links {
+    display: none;
+  }
+}
