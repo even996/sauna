@@ -1,0 +1,156 @@
+/* SAUNAS SECTION */
+.section {
+  padding: 6rem 3rem;
+}
+
+.section-header {
+  margin-bottom: 3.5rem;
+}
+
+.section-tag {
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--ember);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.section-h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 300;
+  color: var(--white);
+  line-height: 1.15;
+}
+
+.section-h2 em {
+  font-style: italic;
+  color: var(--amber);
+}
+
+.sauna-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5px;
+  background: rgba(192, 118, 58, 0.08);
+}
+
+.sauna-card {
+  background: var(--ash);
+  padding: 2.5rem;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.3s;
+  overflow: hidden;
+}
+
+.sauna-card::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(to right, var(--ember), var(--amber));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.sauna-card:hover {
+  background: #252018;
+}
+
+.sauna-card:hover::before {
+  transform: scaleX(1);
+}
+
+.sauna-card-tag {
+  display: inline-block;
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ember);
+  border: 1px solid rgba(192, 118, 58, 0.3);
+  padding: 0.25rem 0.7rem;
+  margin-bottom: 1.5rem;
+}
+
+.sauna-card-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.9rem;
+  font-weight: 300;
+  color: var(--white);
+  margin-bottom: 0.75rem;
+}
+
+.sauna-card-desc {
+  font-size: 0.85rem;
+  color: var(--mist);
+  line-height: 1.75;
+  margin-bottom: 2rem;
+}
+
+.sauna-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.8rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.sauna-meta-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.78rem;
+}
+
+.sauna-meta-key {
+  color: var(--mist);
+  letter-spacing: 0.08em;
+}
+
+.sauna-meta-val {
+  color: var(--birch);
+}
+
+.sauna-price {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  color: var(--amber);
+  margin-bottom: 1.2rem;
+}
+
+.sauna-cta {
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ember);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'Jost', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0;
+  transition: color 0.2s, gap 0.2s;
+}
+
+.sauna-card:hover .sauna-cta {
+  color: var(--amber);
+  gap: 0.8rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .section {
+    padding: 4rem 1.5rem;
+  }
+
+  .sauna-grid {
+    grid-template-columns: 1fr;
+  }
+}
