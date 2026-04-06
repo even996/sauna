@@ -12,7 +12,7 @@ export default function Sauna({ onBookClick }: SaunaProps) {
   return (
     <section className="section" id="badstuer">
       <div className="section-header">
-        <span className="section-tag">Våre rom</span>
+        <span className="section-tag">Våre badstuer</span>
         <h2 className="section-h2">
           Tre måter å finne<br />din <em>indre ro</em>
         </h2>

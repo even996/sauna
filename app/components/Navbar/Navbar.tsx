@@ -4,11 +4,10 @@ import { useState, useEffect } from "react";
 import "./Navbar.css";
 
 const NAV_LINKS = [
-  { label: "Om oss", href: "#om-oss" },
   { label: "Badstuer", href: "#badstuer" },
   { label: "Priser", href: "#priser" },
-  { label: "Sted", href: "#sted" },
-  { label: "Book", href: "#book" },
+  { label: "Steder", href: "#steder" },
+  { label: "Om oss", href: "#om-oss" },
 ];
 
 interface NavbarProps {
