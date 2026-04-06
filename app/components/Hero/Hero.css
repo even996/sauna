@@ -6,7 +6,7 @@
   justify-content: flex-end;
   position: relative;
   overflow: hidden;
-  padding: 0 3rem 5rem;
+  padding: 80px 3rem 5rem; /* was: 0 3rem 5rem */
 }
 
 .hero-bg {
