@@ -25,8 +25,8 @@ export default function HomePage() {
       
       <Navbar onBookClick={() => openBooking()} />
       <Hero onBookClick={() => openBooking()} />
-      <ImageCarousel />
       <Features />
+      <ImageCarousel />
       <Saunas onBookClick={(name) => openBooking(name)} />
       <CtaBanner onBookClick={() => openBooking()} />
       <Footer />
